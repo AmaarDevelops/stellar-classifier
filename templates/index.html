@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Celestial Classifier</h1>
+        <p>Enter stellar/magnitude features to classify an object as <b>Galaxy</b>, <b>Star</b> or <b>QSO</b>.</p>
+
+        <form id="predictionForm">
+
+            <div class="form-group">
+                <label for="u">u (magnitude)</label>
+                <input type="number" step="any" id="u" name="u" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="g">g (magnitude)</label>
+                <input type="number" step="any" id="g" name="g" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="r">r (magnitude)</label>
+                <input type="number" step="any" id="r" name="r" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="i">i (magnitude)</label>
+                <input type="number" step="any" id="i" name="i" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="z">z (magnitude)</label>
+                <input type="number" step="any" id="z" name="z" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="alpha">Right Acension (aplha)</label>
+                <input type="number" step="any" id="alpha" name="alpha" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="delta">Delination (delta) </label>
+                <input type="numbe" step="any" id="delta" name="delta" required/>
+            </div>
+            
+            <div class="form-group">
+                <label for="redshift">Redshift</label>>
+                <input type="number" step="any" id="redshift" name="redshift" required/>
+            </div>
+
+            <button type="submit">Classify</button>
+
+        </form>
+
+        <div id="result" class="result-box"></div>
+
+    </div>
+    
+    <script src="static/script.js"></script>
+    
+    
+    
+</body>
+</html>
